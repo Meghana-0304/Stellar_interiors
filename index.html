@@ -1,86 +1,45 @@
 <!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; }
-        .slider {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            width: 300vw;
-            animation: slide 9s infinite;
-        }
-        .slide {
-            width: 100vw;
-            height: 100vh;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-            color: white;
-            text-align: center;
-        }
-        .company-name {
-            font-size: 4rem;
-            font-weight: bold;
-            font-family: 'Cinzel', serif;
-            animation: glow 2s infinite alternate;
-        }
-        .coming-soon {
-            font-size: 3rem;
-            font-weight: bold;
-            animation: wiggle 1.5s infinite;
-        }
-        @keyframes slide {
-            0%, 33% { transform: translateX(0); }
-            34%, 66% { transform: translateX(-100vw); }
-            67%, 100% { transform: translateX(-200vw); }
-        }
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
-            100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff; }
-        }
-        @keyframes wiggle {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(3deg); }
-            50% { transform: rotate(-3deg); }
-            75% { transform: rotate(2deg); }
-            100% { transform: rotate(0deg); }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="slider">
-        <div class="slides">
-            <div class="slide" style="background-image: url('oneee.jpg');"></div>
-            <div class="slide" style="background-image: url('twooo.jpg');"></div>
-            <div class="slide" style="background-image: url('threee.png');"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stellar Interiors</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <img src="image.png" alt="" class="image" />
+      <img src="logo.png" alt="" class="logo" />
+      <header>Coming Soon</header>
+      <p>
+        Our website is under construction. We're working hard to improve our
+        website and we'll be ready to launch after.
+      </p>
+      <div class="time-content">
+        <div class="time days">
+          <span class="number"></span>
+          <span class="text">days</span>
         </div>
-        <div class="overlay">
-            <div class="company-name">Stellar Interiors</div>
-            <div class="coming-soon">Coming Soon...</div>
+        <div class="time hours">
+          <span class="number"></span>
+          <span class="text">hours</span>
         </div>
-    </div>
-</body>
+        <div class="time minutes">
+          <span class="number"></span>
+          <span class="text">minutes</span>
+        </div>
+        <div class="time seconds">
+          <span class="number"></span>
+          <span class="text">seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>

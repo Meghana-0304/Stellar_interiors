@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     days = document.querySelector(".days .number");
 
   // Set the target release date (YYYY-MM-DDTHH:MM:SS)
-  const launchDate = new Date("2025-03-01T00:00:00").getTime();
+  const launchDate = new Date("2025-03-01T00:00:00Z").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();

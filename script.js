@@ -4,12 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     hours = document.querySelector(".hours .number"),
     days = document.querySelector(".days .number");
 
-  // Set the target release date (YYYY-MM-DDTHH:MM:SS)
-  const launchDate = new Date("2025-03-01T00:00:00Z").getTime();
+  // Set the launch date (Ensure correct format & avoid timezone issues)
+  const launchDate = new Date(Date.UTC(2025, 2, 1, 0, 0, 0)).getTime(); // March 1, 2025, 00:00:00 UTC
 
   function updateCountdown() {
-    const now = new Date().getTime();
+    const now = new Date().getTime(); // Get current time in milliseconds
     const timeLeft = launchDate - now;
+
+    if (timeLeft <= 0) {
+      document.querySelector(".time-content").innerHTML = "<h2>We're Live!</h2>";
+      clearInterval(countdownInterval);
+      return;
+    }
 
     const dayValue = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hourValue = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -24,5 +30,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Start the countdown and update every second
   const countdownInterval = setInterval(updateCountdown, 1000);
-  updateCountdown(); // Initial call to avoid 1-second delay
+  updateCountdown(); // Run once immediately to avoid delay
 });

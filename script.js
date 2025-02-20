@@ -1,34 +1,28 @@
-const seconds = document.querySelector(".seconds .number"),
-  minutes = document.querySelector(".minutes .number"),
-  hours = document.querySelector(".hours .number"),
-  days = document.querySelector(".days .number");
+document.addEventListener("DOMContentLoaded", function () {
+  const seconds = document.querySelector(".seconds .number"),
+    minutes = document.querySelector(".minutes .number"),
+    hours = document.querySelector(".hours .number"),
+    days = document.querySelector(".days .number");
 
-let secValue = 42,
-  minValue = 7,
-  hourValue = 2,
-  dayValue = 6;
+  // Set the target release date (YYYY-MM-DDTHH:MM:SS)
+  const launchDate = new Date("2025-03-01T00:00:00").getTime();
 
-const timeFunction = setInterval(() => {
-  secValue--;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = launchDate - now;
 
-  if (secValue === 0) {
-    minValue--;
-    secValue = 60;
-  }
-  if (minValue === 0) {
-    hourValue--;
-    minValue = 60;
-  }
-  if (hourValue === 0) {
-    dayValue--;
-    hourValue = 24;
+    const dayValue = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hourValue = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minValue = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const secValue = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    days.textContent = dayValue < 10 ? `0${dayValue}` : dayValue;
+    hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
+    minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
+    seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
   }
 
-  if (dayValue === 0) {
-    clearInterval(timeFunction);
-  }
-  seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
-  minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
-  hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
-  days.textContent = dayValue < 10 ? `0${dayValue}` : dayValue;
-}, 1000); //1000ms = 1s
+  // Start the countdown and update every second
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call to avoid 1-second delay
+});

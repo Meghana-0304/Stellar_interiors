@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     days = document.querySelector(".days .number");
 
   // Set the launch date (Ensure correct format & avoid timezone issues)
-  const launchDate = new Date(Date.UTC(2025, 2, 1, 0, 0, 0)).getTime(); // March 1, 2025, 00:00:00 UTC
+  const launchDate = new Date(Date.UTC(2025, 2, 4, 0, 0, 0)).getTime(); // March 1, 2025, 00:00:00 UTC
 
   function updateCountdown() {
     const now = new Date().getTime(); // Get current time in milliseconds

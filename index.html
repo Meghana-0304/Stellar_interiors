@@ -1,45 +1,439 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab | www.codinglabweb.com-->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stellar Interiors</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <img src="image.png" alt="" class="image" />
-      <img src="logo.png" alt="" class="logo" />
-      <header>Coming Soon</header>
-      <p>
-        Our website is under construction. We're working hard to improve our
-        website and we'll be ready to launch after.
-      </p>
-      <div class="time-content">
-        <div class="time days">
-          <span class="number"></span>
-          <span class="text">days</span>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Stellar Interiors</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/logo.png" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/logo.png" alt="Logo" class="me-2" style="height: 50px;">
+        <h1 class="sitename">Stellar Interiors</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <!-- <img src="assets/img/backdrop.avif" alt="" data-aos="fade-in"> -->
+
+      <div id="hero-carousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="container position-relative">
+
+          <div class="carousel-item active">
+            <div class="carousel-container">
+              <h2>Welcome to Stellar Interiors</h2>
+              <p>At Stellar Interiors, we believe that a well-designed space is more than just a visual delight—it’s a
+                reflection of your personality, lifestyle, and aspirations. With a passion for creativity and a
+                commitment to excellence, we transform ordinary spaces into extraordinary experiences. Whether it's your
+                home, office, or commercial space, our designs bring harmony, elegance, and functionality together
+                seamlessly.</p>
+            </div>
+          </div><!-- End Carousel Item -->
+
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2>Design That Speaks Your Style</h2>
+              <p>Your space should feel uniquely yours, and that’s where we come in. At Stellar Interiors, we don’t just
+                design—we curate interiors that reflect your personality and taste. Whether you love minimal elegance,
+                bold statement pieces, or a seamless blend of modern and traditional elements, we craft designs that
+                resonate with your vision while ensuring maximum comfort and practicality.</p>
+            </div>
+          </div><!-- End Carousel Item -->
+
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2>Innovation, Quality & Perfection</h2>
+              <p>We bring together cutting-edge technology, high-quality materials, and expert craftsmanship to deliver
+                interiors that are both timeless and trendsetting. With a deep focus on detail, precision, and seamless
+                execution, our team ensures that every project is completed to perfection. At Stellar Interiors, we
+                don’t just create spaces—we create experiences that leave a lasting impression.</p>
+            </div>
+          </div><!-- End Carousel Item -->
+
+          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+          </a>
+
+          <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+          </a>
+
+          <ol class="carousel-indicators"></ol>
         </div>
-        <div class="time hours">
-          <span class="number"></span>
-          <span class="text">hours</span>
-        </div>
-        <div class="time minutes">
-          <span class="number"></span>
-          <span class="text">minutes</span>
-        </div>
-        <div class="time seconds">
-          <span class="number"></span>
-          <span class="text">seconds</span>
-        </div>
+
       </div>
-    </section>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-  </body>
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>A Perfect Fusion of Elegance & Functionality</h3>
+              </a>
+              <p>Beauty with purpose—our designs blend aesthetics and practicality, ensuring your space is as functional
+                as it is stunning.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon">
+                <i class="bi bi-house-heart"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Bespoke Creations for Every Space</h3>
+              </a>
+              <p>From chic urban homes to sophisticated offices and inviting commercial spaces, we tailor every design
+                to bring your vision to life.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <div class="icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>Uncompromising Quality & Masterful Craftsmanship</h3>
+              </a>
+              <p>We believe luxury is in the details—our team uses top-tier materials and expert artistry to create
+                interiors that stand the test of time.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <div class="icon">
+                <i class="bi bi-emoji-heart-eyes"></i>
+              </div>
+              <a class="stretched-link">
+                <h3>A Seamless Journey, from Dream to Reality</h3>
+              </a>
+              <p>Sit back and relax! We handle everything—from concept to execution—delivering impeccable results on
+                time, every time.</p>
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>ABOUT US</h3>
+            <p class="fst-italic">
+              Designing Homes, Crafting Dreams.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Stellar Interiors is a name synonymous with quality and
+                  excellence. Established in Vijayawada, our mission has always been to create exceptional interiors
+                  that elevate homes and lifestyles.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>We understand that a home is more than just a space—it’s a
+                  reflection of your emotions, memories, and aspirations. It’s where you spend cherished moments with
+                  loved ones, and we take pride in making it truly yours.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Our expert luxury interior designers take the time to
+                  understand your vision, preferences, and lifestyle. We curate bespoke design solutions that blend
+                  elegance, comfort, and functionality—ensuring a home that is as unique as you.</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1"
+                class="purecounter"></span><span>+</span>
+              <p>Successful Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                class="purecounter"></span><span>+</span>
+              <p>Unique Styles</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="99" data-purecounter-duration="1"
+                class="purecounter"></span><span>%</span>
+              <p>On-Time Delivery</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                class="purecounter"></span><span>+</span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Discover the foundation of exceptional interiors—where every detail matters.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <h3>Transforming Spaces, Elevating Lifestyles</h3>
+            <p class="fst-italic">
+              Where Innovation Meets Timeless Elegance.
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i><span>At Stellar Interiors, we go beyond just aesthetics—we create
+                  interiors that seamlessly blend luxury, comfort, and functionality. Every space is designed to enhance
+                  both beauty and practicality, ensuring an environment that feels as good as it looks.</span></li>
+              <li><i class="bi bi-check"></i> <span>Your home or workspace should be a reflection of your personality
+                  and aspirations. Our expert designers specialize in crafting modern, contemporary, classic, and
+                  fusion-style interiors, curating spaces that inspire and captivate.</span></li>
+              <li><i class="bi bi-check"></i> <span>Using premium materials and innovative techniques, we ensure that
+                  every project stands the test of time. Whether it’s a cozy home, a stylish office, or a high-end
+                  commercial space, we are committed to delivering quality, precision, and flawless execution—turning
+                  your vision into reality.</span></li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>Bespoke Designs, Crafted for You</h3>
+            <p class="fst-italic">
+              Every space is unique, and so are your needs. .
+            </p>
+            <p>
+              At Stellar Interiors, we specialize in tailor-made solutions
+              that bring your vision to life. From luxurious kitchens and custom-built wardrobes to exquisite furniture
+              and home styling, our team ensures that every element complements your lifestyle. We blend creativity with
+              practicality, ensuring that our designs are not only visually stunning but also
+              highly functional. With a keen eye for detail and a passion for perfection, we curate interiors that
+              balance elegance and efficiency. Whether you seek a sleek, modern look or a warm, traditional ambiance, we
+              create spaces that resonate with your taste and personality.
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>Precision, Quality & Seamless Execution</h3>
+            <p class="fst-italic">
+              From Concept to Completion—A Stress-Free Experience
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Designing your home should be an exciting experience, not a
+                  stressful one. At Stellar Interiors, we handle every step of the process—from the initial consultation
+                  to the final touches—so you can sit back and enjoy the transformation.</span></li>
+              <li><i class="bi bi-check"></i><span>Our meticulous planning includes 3D visualizations, giving you a
+                  clear preview of your space before execution. This ensures every design detail aligns with your
+                  expectations, making the process smooth and transparent.</span></li>
+              <li><i class="bi bi-check"></i> <span>We use top-quality materials and the latest design trends to create
+                  interiors that are both durable and elegant. Whether it’s painting, structural renovations, or
+                  high-end furnishings, our expert craftsmen execute every detail with precision—delivering stunning
+                  interiors, on time and effortlessly.</span>.
+              </li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h3>STELLAR INTERIORS MODERN DESIGN</h3>
+            <p class="fst-italic">
+              Where Creativity Meets Comfort
+            </p>
+            <p>
+              At Stellar Interiors, we blend artistic innovation with cozy elegance, transforming ordinary spaces into
+              extraordinary experiences. Our designs are not just visually stunning but also crafted for comfort,
+              ensuring every corner of your home or office feels warm, inviting and uniquely yours.
+            </p>
+            <p>
+              Let us bring your vision to life - where style meets serenity an creativity meets comfort!
+            </p>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-7 footer-about">
+          <h4>Steller Interiors</h4>
+          <div class="footer-contact pt-3">
+            <p>Ranganna vari street, Amma Hotel back-side, 2nd Line</p>
+            <p>Vijayawada, Andhra Pradesh 520001</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 74163 77999</span></p>
+            <p><strong>Email:</strong> <span>stellarinteriors999@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="products.html">Products</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="portfolio.html">Portfolio</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Business Hours</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i>Mon - Sat : 10AM to 9PM</li>
+            <li><i class="bi bi-chevron-right"></i>Sun : Closed</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Let’s Stay Connected! Follow us for daily design inspiration, expert tips, and a glimpse into our latest
+            projects</p>
+          <div class="social-links d-flex">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/share/15x5bT9hDJ/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/stellarinteriors.vja?igsh=MXNzNWF0eXNkMzNjZw=="><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@stellarinteriorsvijayawada?si=rdXaJAPPVOkF9XkS"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Stellar Interiors</strong> <span>All Rights
+          Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
